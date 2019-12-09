@@ -1,4 +1,4 @@
-<p><strong>EIP-#{{ eip.eip }}: {{ eip.title }}</strong> is in {{ eip.status }} status. It is authored by {{ eip.author | escape }} and was originally created {{ eip.created | date: '%Y-%m-%d' }}. It is in the {{ eip.category }} category of type {{ eip.type }}.</p>
+<p><strong>EIP-{{ eip.eip }}: {{ eip.title }}</strong> is in {{ eip.status }} status. It is authored by {{ eip.author | escape }} and was originally created {{ eip.created | date: '%Y-%m-%d' }}. It is in the {{ eip.category }} category of type {{ eip.type }}.</p>
         
 {% if eip.discussions-to %}
   <p>The author has requested that discussions happen at the following URL: <a target="_blank" href="{{ eip.discussions-to }}">{{ eip.discussions-to }}</a>{{ eip.discussions-to }}</p>
@@ -7,7 +7,7 @@
 {% endif %}
         
 {% if eip.requires[0] %}
-  <p>EIP-#{{ eip.eip }} requires:</p>
+  <p>EIP-{{ eip.eip }} requires:</p>
   <ul>
   {% for required in eip.requires %}
     <li><a href="{{ site.url }}/EIPS/eip-{{ required }}">EIP-{{ required }}</a></li>
